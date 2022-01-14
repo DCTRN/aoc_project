@@ -1,0 +1,12 @@
+@startuml
+Użytkownik -> Aplikacja: python app.py -u użytkownik.jpg -i obraz.jpg
+Aplikacja -> Aplikacja: wczytaj argumenty
+Aplikacja -> Aplikacja: załaduj obrazy
+Aplikacja -> Aplikacja: skonwertuj obrazy
+Aplikacja -> Aplikacja: porównaj tablice
+alt Użytkownik rozpoznany
+    Aplikacja --> Użytkownik: zwróć wynik: User recognized
+else Użytkownik nierozpoznany
+    Aplikacja --> Użytkownik: zwróć wynik: User not recognized
+end
+@enduml
